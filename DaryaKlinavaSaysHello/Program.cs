@@ -39,8 +39,8 @@ internal class Program
         {
             int inputDays = Convert.ToInt16(number);
             int years = inputDays / 365;
-            int month = (inputDays % 365) / 12;
-            int days = (inputDays % 365) % 12;
+            int month = (inputDays % 365) / 30;
+            int days = (inputDays % 365) % 30;
             Console.WriteLine($"{years} years, {month} month, {days} days");
         }
         else
@@ -60,7 +60,7 @@ internal class Program
     {
         sbyte n1 = -34;
         byte n2 = 4;
-        object greeting = "Hello";
+        string greeting = "Hello";
         char a = 'R';
         double n3 = 23.093433222;
         ushort n4 = 4000;
@@ -99,8 +99,8 @@ internal class Program
     {
         Console.WriteLine("Input any number");
         string inputNumber = Console.ReadLine();
-        int A = Convert.ToInt32(inputNumber);
-        if ( ((A < 50 & A != 37) && (A >= 32)) || ( A == 15 | A == 0))
+        int a = Convert.ToInt32(inputNumber);
+        if ( ((a < 50 & a != 37) && (a >= 32)) || ( a == 15 | a == 0))
         {
             Console.WriteLine("Working");
         }
