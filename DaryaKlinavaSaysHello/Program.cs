@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Data;
+using System.Text;
 
 internal class Program
 {
@@ -7,15 +8,25 @@ internal class Program
         Console.OutputEncoding = Encoding.UTF8;
 
         //firstHomework();
-        Task1();
-        Task2();
-        Task3();
-        Task4();
-        Task5();
-        Task6();
-        Task7();
-        Task8();
-        Task9();
+        //Task1_1();
+        //Task1_2();
+        //Task1_3();
+        //Task1_4();
+        //Task1_5();
+        //Task1_6();
+        //Task1_7();
+        //Task1_8();
+        //Task1_9();
+        Task2_1();
+        Task2_2();
+        Task2_3();
+        Task2_4();
+        Task2_5();
+        Task2_6();
+        Task2_7();
+        Task2_8();
+        Task2_9();
+        Task2_10();
     }
 
     private static void firstHomework()
@@ -24,14 +35,13 @@ internal class Program
         var name = Console.ReadLine();
         Console.WriteLine($"Nice to meet you {name}");
     }
-
-    private static void Task1()
+    private static void Task1_1()
     {
         var num = 20;
         num += 5;
         Console.WriteLine($"Переменная: {num}");
     }
-    private static void Task2()
+    private static void Task1_2()
     {
         Console.WriteLine("Input 4 digit number");
         string number = Console.ReadLine();
@@ -49,14 +59,14 @@ internal class Program
         }
 
     }
-    private static void Task3()
+    private static void Task1_3()
     {
         Console.WriteLine("Input any number");
         string inputNumber = Console.ReadLine();
         int number = Convert.ToInt16(inputNumber);
         Console.WriteLine(number + number * 2);
     }
-    private static void Task4()
+    private static void Task1_4()
     {
         sbyte n1 = -34;
         byte n2 = 4;
@@ -67,7 +77,7 @@ internal class Program
         bool isB = true;
         byte n5 = 0;  
     }
-    private static void Task5()
+    private static void Task1_5()
     {
         Console.WriteLine("Input any data");
         string inputData = Console.ReadLine();
@@ -76,13 +86,13 @@ internal class Program
         char char1 = Convert.ToChar(inputData.First());
         double number3 = Convert.ToDouble(inputData);
     }
-    private static void Task6()
+    private static void Task1_6()
     {
         int n1 = -5;
         int n2 = n1 * 7;
         n1--;
     }
-    private static void Task7()
+    private static void Task1_7()
     {
         Console.WriteLine("Input any number");
         string inputNumber = Console.ReadLine();
@@ -95,7 +105,7 @@ internal class Program
             Console.WriteLine("This number is odd!");
         }
     }
-    private static void Task8()
+    private static void Task1_8()
     {
         Console.WriteLine("Input any number");
         string inputNumber = Console.ReadLine();
@@ -109,8 +119,7 @@ internal class Program
             Console.WriteLine("Not working!:(");
         }
     }
-
-    private static void Task9()
+    private static void Task1_9()
     {
         Console.WriteLine("Input number 1");
         string inputNumber = Console.ReadLine();
@@ -133,5 +142,123 @@ internal class Program
                 Console.WriteLine(Convert.ToInt64(inputNumber) / Convert.ToInt64(inputNumber2));
                 break;
         }
+    }
+
+    private static void Task2_1()
+    {
+        Console.WriteLine("Input any number");
+        uint inputNumber = Convert.ToUInt32(Console.ReadLine());
+        for (int i = 0, y = 0; i < inputNumber; y += i) 
+        {
+            i++;
+            if (i == inputNumber)
+                Console.WriteLine(y + inputNumber);
+        }
+    }
+
+    private static void Task2_2()
+    {
+        int i = 0;
+        while (i < 10)
+        {
+            i++;
+            Console.WriteLine($"3 * {i} = {3 * i}");
+        }
+    }
+
+    private static void Task2_3()
+    {
+        int[] numbers = new int[] { 3, 5, 9, 8, 15 };
+        for (int i = 0, y = 1; i < numbers.Length; i++)
+        {
+            y *= numbers[i];
+            if (i == numbers.Length - 1)
+                Console.WriteLine(y);
+        }
+    }
+
+    private static void Task2_4()
+    {
+       for (int i = 1, y = 2048; y > 10; i++)
+        {
+            y /= 2;
+            if (y < 10)
+                Console.WriteLine(i);
+        }
+    }
+
+    private static void Task2_5()
+    {
+        string[] names = new string[] { "oh", "no", "henlo, human", "Blablabla", "hello", "Hello", ":(" };
+        for (int i = 0; i < names.Length; i++)
+        {
+            string y = names[i];
+            if (y.Equals("Hello"))
+            {
+                Console.WriteLine("Labas!");
+                break;
+            }
+        }
+    }
+
+    private static void Task2_6()
+    {
+        int[] numbers = new int[] { 1, 11111, 123, 0, -299, 234, 999 };
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (i == numbers.Length - 1)
+                Console.WriteLine(numbers[0] + numbers[i]);
+        }
+    }
+
+    private static void Task2_7()
+    {
+        int[] numbers = new int[] { 1, 11111, 123, 0, -299, 234, 999 };
+        int a = numbers.Min();
+        int b = numbers.Max();
+        int result = 0;
+        for (int i1 = 0; i1 < numbers.Length; i1++)
+        {
+            if (a == numbers[i1]) 
+            {
+                result += i1;
+            } 
+            else if (b == numbers[i1]) 
+            {
+                result += i1;
+            }
+        }
+        Console.WriteLine(result);
+    }
+
+    private static void Task2_8()
+    {
+        int[] numbers = new int[] { 1, 11111, 123, 0, -299, 234, 999 };
+        Array.Sort(numbers);
+        foreach (int i in numbers)
+        { Console.Write($"{i} "); }
+    }
+
+     private static void Task2_9()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            int y = 1;
+            for (; y <= 10; y++)
+            {
+                Console.WriteLine($"{i} * {y} = {i * y}");
+            }
+        }
+    }
+
+    private static void Task2_10()
+    {
+        int[,] numbers = { { 1, 2, 13 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        int result = 0;
+        for (int i = 0, i2 = 0; i < numbers.GetUpperBound(0) + 1; i++, i2++)
+        {
+            result += numbers[i, i2];
+        }
+        Console.WriteLine(result);
     }
 }
