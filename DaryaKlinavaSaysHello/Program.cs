@@ -17,15 +17,15 @@ internal class Program
         //Task1_7();
         //Task1_8();
         //Task1_9();
-        Task2_1();
-        Task2_2();
-        Task2_3();
-        Task2_4();
-        Task2_5();
-        Task2_6();
-        Task2_7();
-        Task2_8();
-        Task2_9();
+        //Task2_1();
+        //Task2_2();
+        //Task2_3();
+        //Task2_4();
+        //Task2_5();
+        //Task2_6();
+        //Task2_7();
+        //Task2_8();
+        //Task2_9();
         Task2_10();
     }
 
@@ -148,11 +148,12 @@ internal class Program
     {
         Console.WriteLine("Input any number");
         uint inputNumber = Convert.ToUInt32(Console.ReadLine());
-        for (int i = 0, y = 0; i < inputNumber; y += i) 
+        int sum = 0;
+        for (int i = 0; i <= inputNumber; i++) 
         {
-            i++;
+            sum += i;
             if (i == inputNumber)
-                Console.WriteLine(y + inputNumber);
+                Console.WriteLine(sum);
         }
     }
 
@@ -169,20 +170,22 @@ internal class Program
     private static void Task2_3()
     {
         int[] numbers = new int[] { 3, 5, 9, 8, 15 };
-        for (int i = 0, y = 1; i < numbers.Length; i++)
+        int result = 1;
+        for (int i = 0; i < numbers.Length; i++)
         {
-            y *= numbers[i];
+            result *= numbers[i];
             if (i == numbers.Length - 1)
-                Console.WriteLine(y);
+                Console.WriteLine(result);
         }
     }
 
     private static void Task2_4()
     {
-       for (int i = 1, y = 2048; y > 10; i++)
+       int initialNumber = 2048;
+       for (int i = 1; initialNumber > 10; i++)
         {
-            y /= 2;
-            if (y < 10)
+            initialNumber /= 2;
+            if (initialNumber < 10)
                 Console.WriteLine(i);
         }
     }
@@ -190,10 +193,9 @@ internal class Program
     private static void Task2_5()
     {
         string[] names = new string[] { "oh", "no", "henlo, human", "Blablabla", "hello", "Hello", ":(" };
-        for (int i = 0; i < names.Length; i++)
+        foreach (string i in names)
         {
-            string y = names[i];
-            if (y.Equals("Hello"))
+            if (i == "Hello") 
             {
                 Console.WriteLine("Labas!");
                 break;
@@ -204,11 +206,7 @@ internal class Program
     private static void Task2_6()
     {
         int[] numbers = new int[] { 1, 11111, 123, 0, -299, 234, 999 };
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            if (i == numbers.Length - 1)
-                Console.WriteLine(numbers[0] + numbers[i]);
-        }
+        Console.WriteLine(numbers[0] + numbers[numbers.Length-1]);
     }
 
     private static void Task2_7()
@@ -286,9 +284,9 @@ internal class Program
     {
         int[,] numbers = { { 1, 2, 13 }, { 4, 5, 6 }, { 7, 8, 9 } };
         int result = 0;
-        for (int i = 0, i2 = 0; i < numbers.GetUpperBound(0) + 1; i++, i2++)
+        for (int i = 0; i < numbers.GetUpperBound(0) + 1; i++)
         {
-            result += numbers[i, i2];
+            result += numbers[i, i];
         }
         Console.WriteLine(result);
     }
