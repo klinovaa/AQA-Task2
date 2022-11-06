@@ -214,18 +214,35 @@ internal class Program
     private static void Task2_7()
     {
         int[] numbers = new int[] { 1, 11111, 123, 0, -299, 234, 999 };
-        int a = numbers.Min();
-        int b = numbers.Max();
-        int result = 0;
-        for (int i1 = 0; i1 < numbers.Length; i1++)
+        int maxValue = 0;
+        int minValue = 0;
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if (a == numbers[i1]) 
+            if (i == 0) {
+                minValue = numbers[i];
+            } else if (numbers[i] < minValue)
             {
-                result += i1;
-            } 
-            else if (b == numbers[i1]) 
+                minValue = numbers[i];
+            }
+
+            if (i == 0)
             {
-                result += i1;
+                maxValue = numbers[i];
+            } else if (numbers[i] > maxValue)
+            {
+                maxValue = numbers[i];
+            }
+        }
+        int result = 0;
+        for (int y = 0; y < numbers.Length; y++) 
+        {
+            if (numbers[y] == minValue)
+            {
+                result += y;
+            }
+            else if (numbers[y] == maxValue)
+            {
+                result += y;
             }
         }
         Console.WriteLine(result);
@@ -234,9 +251,23 @@ internal class Program
     private static void Task2_8()
     {
         int[] numbers = new int[] { 1, 11111, 123, 0, -299, 234, 999 };
-        Array.Sort(numbers);
+        int changeValue = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            for (int x = i + 1; x < numbers.Length; x++)
+            {
+                if (numbers[i] > numbers[x])
+                {
+                    changeValue = numbers[i];
+                    numbers[i] = numbers[x];
+                    numbers[x] = changeValue;
+                }
+            }
+        }
         foreach (int i in numbers)
-        { Console.Write($"{i} "); }
+        { 
+            Console.Write($"{i} ");
+        }
     }
 
      private static void Task2_9()
