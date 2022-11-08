@@ -26,7 +26,7 @@ internal class Program
         //Task2_7();
         //Task2_8();
         //Task2_9();
-        Task2_10();
+        //Task2_10();
     }
 
     private static void firstHomework()
