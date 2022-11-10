@@ -8,13 +8,17 @@ namespace MyLibrary
         public string lastName;
         public int age;
         public int grade;
-        public Pupil()
-        {
-            firstName = "No";
-            lastName = "name";
-            age = 14;
-            grade = 9;
-        }
+
+        //Constructor chaining
+        //1st constructor
+        public Pupil() : this("No", "name", 14, 9)
+        { }
+
+        //2nd constuctor
+        public Pupil(string firstName, string lastName, int age) : this(firstName, lastName, age, 0)
+        { }
+
+        //3rd constructor
         public Pupil(string firstName, string lastName, int age, int grade)
         {
             this.firstName = firstName;
@@ -22,20 +26,17 @@ namespace MyLibrary
             this.age = age;
             this.grade = grade;
         }
-        public Pupil(string firstName, string lastName, int age)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
-        }
+
         public void GetInfo()
         {
             Console.WriteLine($"Pupil's first name: {firstName}, pupil's last name: {lastName}, pupil's age: {age}");
         }
+
         public void GetFullName()
         {
             Console.WriteLine($"First name: {firstName}, Last name: {lastName}");
         }
+
         public void Study()
         {
             Console.WriteLine($"Pupil study at {grade} grade");

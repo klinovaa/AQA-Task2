@@ -4,8 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Pupil = MyLibrary.Pupil;
-using Teacher = MyLibrary.Teacher;
+using MyLibrary;
 
 namespace MainProject
 {
@@ -21,6 +20,7 @@ namespace MainProject
             type = "School is undefined";
             number = 0;
         }
+
         public School(string type, int number, Pupil[] pupils, Teacher[] teachers)
         {
             this.type = type;
@@ -28,18 +28,22 @@ namespace MainProject
             this.pupils = pupils;
             this.teachers = teachers;
         }
+
         public void GetInfo()
         {
             Console.WriteLine($"School's type - {type}, school's number: {number}");
         }
+
         public void AllPupils()
         {
             Console.WriteLine($"Amount of all pupils - {pupils.Length}");
         }
+
         public void AllTeachers()
         {
             Console.WriteLine($"Amount of all teachers - {teachers.Length}");
         }
+
         public void AllPupilsWithNames() 
         {
             Console.WriteLine("All pupils:");
@@ -48,6 +52,7 @@ namespace MainProject
                 pupils[i].GetFullName();
             }
         }
+
         public void AllTeachersWithNames()
         {
             Console.WriteLine("All teachers:");
@@ -58,6 +63,7 @@ namespace MainProject
                 teachers[i].GetFullName();
             }
         }
+
         public void PupilsRegardingGrade()
         {
             Console.WriteLine("Pupils in 10th grade:");
@@ -69,6 +75,7 @@ namespace MainProject
                 }
             }
         }
+
         public void AddTeacher()
         {
             for (int i = 0; i < teachers.Length; i++)
@@ -88,6 +95,5 @@ namespace MainProject
                 }
             }
         }
-
     }
 }

@@ -13,12 +13,17 @@ namespace MyLibrary
         public string lastName;
         public int age;
         public string subject;
+
+        //Without constructor chaining
+        //1st constructor
         public Teacher()
         {
             firstName = "No";
             lastName = "name";
             subject = "Undefined";
         }
+
+        //2nd constructor
         public Teacher(string firstName, string lastName, int age, string subject)
         {
             this.firstName = firstName;
@@ -26,6 +31,8 @@ namespace MyLibrary
             this.age = age;
             this.subject = subject;
         }
+
+        //3rd constructor
         public Teacher(string firstName, string lastName, int age)
         {
             this.firstName = firstName;
@@ -33,14 +40,17 @@ namespace MyLibrary
             this.age = age;
             subject = "Undefined";
         }
+
         public void GetInfo()
         {
             Console.WriteLine($"Teacher's first name: {firstName}, teacher's last name: {lastName}, teacher's age: {age}");
         }
+
         public void GetFullName()
         {
             Console.WriteLine($"First name: {firstName}, Last name: {lastName}");
         }
+
         public void Teach()
         {
             switch (subject)

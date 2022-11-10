@@ -40,6 +40,5 @@ internal class Program
         school2.PupilsRegardingGrade();
         school2.AddTeacher();
         school2.AllTeachersWithNames();
-
     }
 }
