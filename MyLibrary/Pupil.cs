@@ -11,12 +11,17 @@ namespace MyLibrary
 
         //Constructor chaining
         //1st constructor
-        public Pupil() : this("No", "name", 14, 9)
-        { }
+        public Pupil() : this("No", "name", 14, 9) 
+        {
+        }
 
         //2nd constuctor
-        public Pupil(string firstName, string lastName, int age) : this(firstName, lastName, age, 0)
-        { }
+        public Pupil(string firstName, string lastName, int age)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
 
         //3rd constructor
         public Pupil(string firstName, string lastName, int age, int grade)
