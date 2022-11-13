@@ -2,49 +2,34 @@
 
 namespace MyLibrary
 {
-    public class Pupil
+    public class Pupil : Person
     {
-        public string firstName;
-        public string lastName;
-        public int age;
-        public int grade;
+        public int Grade { get; set; }
 
-        //Constructor chaining
-        //1st constructor
-        public Pupil() : this("No", "name", 14, 9) 
+        public Pupil()
+            : base()
         {
         }
 
-        //2nd constuctor
         public Pupil(string firstName, string lastName, int age)
+            : base(firstName, lastName, age)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
         }
 
-        //3rd constructor
         public Pupil(string firstName, string lastName, int age, int grade)
+            : base (firstName, lastName, age)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
-            this.grade = grade;
+            Grade = grade;
         }
 
-        public void GetInfo()
+        override public void GetInfo()
         {
-            Console.WriteLine($"Pupil's first name: {firstName}, pupil's last name: {lastName}, pupil's age: {age}");
-        }
-
-        public void GetFullName()
-        {
-            Console.WriteLine($"First name: {firstName}, Last name: {lastName}");
+            Console.WriteLine($"Pupil's first name: {FirstName}, pupil's last name: {LastName}, pupil's age: {Age}");
         }
 
         public void Study()
         {
-            Console.WriteLine($"Pupil study at {grade} grade");
+            Console.WriteLine($"Pupil study at {Grade} grade");
         }
     }
 }
