@@ -1,10 +1,12 @@
 ﻿using Homework7;
 using MyLibrary;
+using System.ComponentModel.DataAnnotations;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        //TASK 1
         Cat cat1 = new Cat
         {
             kind = "Cat",
@@ -24,6 +26,19 @@ internal class Program
         dolphin1.Eat();
         dolphin1.Speak();
         dolphin1.GetHomeForDolphin();
+
+        //TASK 2
+        Console.WriteLine("_________________");
+        Ship ship1 = new Ship();
+        ship1.Cargo = "Cars";
+        ship1.Swim();
+        Console.WriteLine(ship1.Direction);
+        ship1.TransportCargo();
+        Truck truck1 = new Truck();
+        truck1.Cargo = "Cement";
+        truck1.StartEngine();
+        truck1.TransportCargo();
+
 
     }
 }
