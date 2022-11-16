@@ -10,28 +10,28 @@ namespace MainProject
 {
     internal class School
     {
-        public string type;
-        public int number;
+        public string Type { get; set; }
+        public int Number { get; set; }
         public Pupil[] pupils;
         public Teacher[] teachers;
 
         public School()
         {
-            type = "School is undefined";
-            number = 0;
+            Type = "School is undefined";
+            Number = 0;
         }
 
         public School(string type, int number, Pupil[] pupils, Teacher[] teachers)
         {
-            this.type = type;
-            this.number = number;
+            Type = type;
+            Number = number;
             this.pupils = pupils;
             this.teachers = teachers;
         }
 
         public void GetInfo()
         {
-            Console.WriteLine($"School's type - {type}, school's number: {number}");
+            Console.WriteLine($"School's type - {Type}, school's number: {Number}");
         }
 
         public void AllPupils()
@@ -69,7 +69,7 @@ namespace MainProject
             Console.WriteLine("Pupils in 10th grade:");
             for (int i = 0; i < pupils.Length; i++)
             {
-                if (pupils[i].grade == 10)
+                if (pupils[i].Grade == 10)
                 {
                     pupils[i].GetFullName();
                 }

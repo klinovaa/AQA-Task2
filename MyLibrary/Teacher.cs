@@ -7,53 +7,35 @@ using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public class Teacher
+    public class Teacher : Person
     {
-        public string firstName;
-        public string lastName;
-        public int age;
-        public string subject;
+        public string Subject { get; set; }
 
-        //Without constructor chaining
-        //1st constructor
         public Teacher()
+            : base()
         {
-            firstName = "No";
-            lastName = "name";
-            subject = "Undefined";
         }
 
-        //2nd constructor
-        public Teacher(string firstName, string lastName, int age, string subject)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
-            this.subject = subject;
-        }
-
-        //3rd constructor
         public Teacher(string firstName, string lastName, int age)
+            : base(firstName, lastName, age)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
-            subject = "Undefined";
+            Subject = "Undefined";
         }
 
-        public void GetInfo()
+        public Teacher(string firstName, string lastName, int age, string subject)
+            : base(firstName, lastName, age)
         {
-            Console.WriteLine($"Teacher's first name: {firstName}, teacher's last name: {lastName}, teacher's age: {age}");
+            Subject = subject;
         }
 
-        public void GetFullName()
+        public override void GetInfo()
         {
-            Console.WriteLine($"First name: {firstName}, Last name: {lastName}");
+            Console.WriteLine($"Teacher's first name: {FirstName}, teacher's last name: {LastName}, teacher's age: {Age}");
         }
 
         public void Teach()
         {
-            switch (subject)
+            switch (Subject)
             {
                 case "Math":
                     Console.WriteLine("Teacher's subject is Math");
