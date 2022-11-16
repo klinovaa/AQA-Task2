@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework7
 {
-    internal interface IPrinting
+    public interface IPrinting
     {
         public void Print();
     }

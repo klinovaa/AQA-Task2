@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework7
 {
-    internal interface IPhotagraphing
+    public interface IPhotagraphing
     {
         public void TakePhoto();
     }
