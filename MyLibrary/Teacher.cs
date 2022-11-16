@@ -28,7 +28,7 @@ namespace MyLibrary
             Subject = subject;
         }
 
-        override public void GetInfo()
+        public override void GetInfo()
         {
             Console.WriteLine($"Teacher's first name: {FirstName}, teacher's last name: {LastName}, teacher's age: {Age}");
         }

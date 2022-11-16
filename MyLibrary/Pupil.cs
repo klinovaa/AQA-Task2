@@ -22,7 +22,7 @@ namespace MyLibrary
             Grade = grade;
         }
 
-        override public void GetInfo()
+        public override void GetInfo()
         {
             Console.WriteLine($"Pupil's first name: {FirstName}, pupil's last name: {LastName}, pupil's age: {Age}");
         }
