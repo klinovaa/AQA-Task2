@@ -13,8 +13,8 @@ namespace Homework7
         public abstract string Description { get; }
         public Technic(string? modelName, decimal price)
         {
-            this.modelName = modelName;
-            this.price = price;
+            ModelName = modelName;
+            Price = price;
         }
 
         public abstract void TurnOn();
