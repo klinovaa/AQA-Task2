@@ -12,5 +12,6 @@ internal class Program
 
         //task3 list
         List2.FindWordOfFiveChars(words);
+        List2.FindWordOfAnyChars(words);
     }
 }
