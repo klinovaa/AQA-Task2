@@ -13,5 +13,20 @@ internal class Program
         //task3 list
         List2.FindWordOfFiveChars(words);
         List2.FindWordOfAnyChars(words);
+
+        //task1 Queue
+        Queue<int> numbersQueue = new Queue<int>();
+        Queue.AddNewValue(numbersQueue);
+        var maxValue = Queue.GetMaxValue(numbersQueue);
+        Console.WriteLine(maxValue);
+
+        //task2 Stack
+        Stack<char> charsStack = new Stack<char>();
+        Stack.ReverseThreeChars(charsStack);
+
+
+        
+
+
     }
 }
