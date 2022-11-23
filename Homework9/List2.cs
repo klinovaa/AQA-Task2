@@ -23,6 +23,7 @@ namespace Homework9
 
         public static void FindWordOfAnyChars(List<string> list)
         {
+            Console.WriteLine("Input the length of the search word:");
             int inputedValue = Convert.ToInt32(Console.ReadLine());
             var selectedNumbers = list.Where(p => p.Length == inputedValue);
             foreach (string word in selectedNumbers)
