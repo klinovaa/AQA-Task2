@@ -19,7 +19,7 @@ namespace Homework9
                     break;
                 }
 
-                Console.WriteLine("Input a char, please");
+                Console.WriteLine("Input any char, please");
                 var inputChar = Console.ReadLine();
 
                 if (inputChar.Length > 1)
@@ -40,9 +40,9 @@ namespace Homework9
             }
 
             Console.WriteLine("Reverse order:");
-            foreach (char c in stack)
+            for (var i = 0; i <= stack.Count + 1; i++)
             {
-                Console.WriteLine(c);
+                Console.WriteLine(stack.Pop());
             }
         }
     }

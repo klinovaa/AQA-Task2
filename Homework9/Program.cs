@@ -19,17 +19,20 @@ internal class Program
         //Queue.AddNewValue(numbersQueue);
         //var maxValue = Queue.GetMaxValue(numbersQueue);
         //Console.WriteLine(maxValue);
+        //Queue.DeleteMaxValue(numbersQueue);
+        //maxValue = Queue.GetMaxValue(numbersQueue);
+        //Console.WriteLine(maxValue);
 
         ////task2 Stack
         //Stack<char> charsStack = new Stack<char>();
         //Stack.ReverseThreeChars(charsStack);
 
         //task1 Dictionary
-        Dictionary<int, string> people = new Dictionary<int, string>();
-        people.Add(25, "Darya");
-        people[15] = "Anna";
-        people.TryGetValue(25, out string value);
-        Console.WriteLine($"Age: 25, Name is {value}");
+        Dictionary<string, int> people = new Dictionary<string, int>();
+        people.Add("Darya", 25);
+        people["Anna"] = 15;
+        people.TryGetValue("Darya", out int value);
+        Console.WriteLine($"Name is \"Darya\", Age - {value}");
 
 
 
