@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Homework10
 {
     public class GenericClass<T> where T : Human
@@ -54,6 +49,7 @@ namespace Homework10
             {
                 Console.WriteLine($"There are only man");
             }
+
             for (int i = 0; i < collection.GetArrayLength(); i++)
             {
                 Console.WriteLine($"Name is {collection.GetElementByIndex(i).Name}, surname is {collection.GetElementByIndex(i).Surname}");

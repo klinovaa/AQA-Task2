@@ -1,6 +1,5 @@
 ﻿using Homework10;
 using Homework7;
-using System;
 
 internal class Program
 {
