@@ -3,10 +3,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Reflection.Emit;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Homework11
 {
@@ -33,7 +29,7 @@ namespace Homework11
             _driver.Navigate().GoToUrl("https://demoqa.com/checkbox");
 
             //find all checkboxes and count them
-            IList<IWebElement> checkboxes = _driver.FindElements(By.XPath("//*[@type='checkbox']"));
+            var checkboxes = _driver.FindElements(By.XPath("//*[@type='checkbox']"));
             int size = checkboxes.Count();
             Assert.AreEqual(1, size);
 
@@ -66,15 +62,15 @@ namespace Homework11
             var chooseAll = _driver.FindElement(By.XPath("//*[@class='rct-checkbox']"));
             chooseAll.Click();
 
-            IList<IWebElement> checkboxes = _driver.FindElements(By.XPath("//*[@type='checkbox']"));
-            IList<IWebElement> checkboxLabels = _driver.FindElements(By.XPath("//*[@class='rct-title']"));
+            var checkboxes = _driver.FindElements(By.XPath("//*[@type='checkbox']"));
+            var checkboxLabels = _driver.FindElements(By.XPath("//*[@class='rct-title']"));
             var resultText = _driver.FindElement(By.Id("result"));
 
             //check text after checking All checkboxes
-            for (int i = 0; i < checkboxes.Count; i++)
+            for (var i = 0; i < checkboxes.Count; i++)
             {
                 var checkbox = checkboxes.ElementAt(i);
-                string label = checkboxLabels.ElementAt(i).Text;
+                var label = checkboxLabels.ElementAt(i).Text;
                 Assert.IsTrue(checkbox.Selected);
                 if (label == "Word File.doc")
                 {
@@ -98,7 +94,7 @@ namespace Homework11
             _driver.Navigate().GoToUrl("https://demoqa.com/radio-button");
 
             //find radiobuttons and count them
-            IList<IWebElement> radioButtons = _driver.FindElements(By.XPath("//*[@type='radio']"));
+            var radioButtons = _driver.FindElements(By.XPath("//*[@type='radio']"));
             int size = radioButtons.Count();
             Assert.AreEqual(3, size);
 
@@ -124,15 +120,15 @@ namespace Homework11
             _driver.Navigate().GoToUrl("https://demoqa.com/radio-button");
 
             //find radiobuttons and their labels
-            IList<IWebElement> radioButtons = _driver.FindElements(By.XPath("//*[@type='radio']"));
-            IList<IWebElement> radioLabels = _driver.FindElements(By.XPath("//label"));
+            var radioButtons = _driver.FindElements(By.XPath("//*[@type='radio']"));
+            var radioLabels = _driver.FindElements(By.XPath("//label"));
             int size = radioButtons.Count();
             Assert.AreEqual(3, size);
 
             var printedText = "You have selected ";
 
             //check text after clicking on radiobutton
-            for (int i = 0; i < size; i++)
+            for (var i = 0; i < size; i++)
             {
                 var radio = radioButtons.ElementAt(i);
                 var label = radioLabels.ElementAt(i);
@@ -189,10 +185,10 @@ namespace Homework11
             submitButton.Click();
 
             var comparableValues = new List<String>() { firstName, lastName, age, email, salary, department };
-            IList<IWebElement> neededRow = _driver.FindElements(By.XPath("//*[@class='rt-tr-group'][4]//*[@class='rt-td']"));
+            var neededRow = _driver.FindElements(By.XPath("//*[@class='rt-tr-group'][4]//*[@class='rt-td']"));
             var actualValues = new List<Object>();
 
-            for (int i = 0; i < neededRow.Count - 1; i++)
+            for (var i = 0; i < neededRow.Count - 1; i++)
             {
                 actualValues.Add(neededRow[i].Text);
             }
@@ -233,10 +229,10 @@ namespace Homework11
         {
             _driver.Navigate().GoToUrl("https://demoqa.com/links");
 
-            IList<IWebElement> links = _driver.FindElements(By.XPath("//*[@id='linkWrapper']/p/a"));
+            var links = _driver.FindElements(By.XPath("//*[@id='linkWrapper']/p/a"));
 
             //check Following links will open new tab
-            for (int i = 0; i < 2; i++)
+            for (var i = 0; i < 2; i++)
             {
                 var link = links.ElementAt(i);
 
@@ -265,13 +261,13 @@ namespace Homework11
         {
             _driver.Navigate().GoToUrl("https://demoqa.com/links");
 
-            IList<IWebElement> links = _driver.FindElements(By.XPath("//*[@id='linkWrapper']/p/a"));
+            var links = _driver.FindElements(By.XPath("//*[@id='linkWrapper']/p/a"));
 
             var printedText1 = "Link has responded with staus ";
             var printedText2 = " and status text ";
 
             //check Following links will send an api call
-            for (int i = 2; i < links.Count; i++)
+            for (var i = 2; i < links.Count; i++)
             {
                 var link = links.ElementAt(i);
 
@@ -313,7 +309,7 @@ namespace Homework11
                         break;
                 }
 
-                IWebElement resultText = _driverWait.Until(drv => drv.FindElement(By.Id("linkResponse")));
+                var resultText = _driverWait.Until(drv => drv.FindElement(By.Id("linkResponse")));
                 Assert.AreEqual(resultText.Text, printedText1 + status + printedText2 + name);
             }
         }
