@@ -30,7 +30,7 @@ namespace Homework11
 
             //find all checkboxes and count them
             var checkboxes = _driver.FindElements(By.XPath("//*[@type='checkbox']"));
-            int size = checkboxes.Count();
+            var size = checkboxes.Count();
             Assert.AreEqual(1, size);
 
             //expand all and count chechboxes
@@ -95,7 +95,7 @@ namespace Homework11
 
             //find radiobuttons and count them
             var radioButtons = _driver.FindElements(By.XPath("//*[@type='radio']"));
-            int size = radioButtons.Count();
+            var size = radioButtons.Count();
             Assert.AreEqual(3, size);
 
             //check text for yes button
@@ -122,7 +122,7 @@ namespace Homework11
             //find radiobuttons and their labels
             var radioButtons = _driver.FindElements(By.XPath("//*[@type='radio']"));
             var radioLabels = _driver.FindElements(By.XPath("//label"));
-            int size = radioButtons.Count();
+            var size = radioButtons.Count();
             Assert.AreEqual(3, size);
 
             var printedText = "You have selected ";
