@@ -1,12 +1,11 @@
-﻿
-namespace Homework11.Data.Constants
+﻿namespace Homework11.Data.Constants
 {
     public class RadioButtons
     {
-        public const int amountValue = 3;
-        public const string yesValue = "Yes";
-        public const string impressiveValue = "Impressive";
-        public const string noValue = "No";
-        public const string printedText = "You have selected ";
+        public const int AmountValue = 3;
+        public const string YesValue = "Yes";
+        public const string ImpressiveValue = "Impressive";
+        public const string NoValue = "No";
+        public const string PrintedText = "You have selected ";
     }
 }

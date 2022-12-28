@@ -25,17 +25,17 @@ namespace Homework11.Tests.DemoQA.Elements
             //check text after clicking double click button
             buttonsPage.DoubleClickButton();
             var doubleClickMessage = buttonsPage.GetDoubleClickMessageText();
-            Assert.AreEqual(Buttons.doubleClickPrintedText, doubleClickMessage);
+            Assert.AreEqual(Buttons.DoubleClickPrintedText, doubleClickMessage);
 
             //check text after right clicking button
             buttonsPage.RightClickButton();
             var rightClickMessage = buttonsPage.GetRightClickMessageText();
-            Assert.AreEqual(Buttons.rightClickPrintedText, rightClickMessage);
+            Assert.AreEqual(Buttons.RightClickPrintedText, rightClickMessage);
 
             //check text after clicking button with dynamic id
             buttonsPage.DynamicClickButton();
             var dynamicClickMessage = buttonsPage.GetDynamicClickMessageText();
-            Assert.AreEqual(Buttons.dynamicClickPrintedText, dynamicClickMessage);
+            Assert.AreEqual(Buttons.DynamicClickPrintedText, dynamicClickMessage);
         }
     }
 }

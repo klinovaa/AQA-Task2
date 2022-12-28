@@ -1,5 +1,4 @@
-﻿
-namespace Homework11.Data.Constants
+﻿namespace Homework11.Data.Constants
 {
     public class DemoQACategories
     {

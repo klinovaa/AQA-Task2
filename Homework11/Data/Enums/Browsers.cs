@@ -1,5 +1,4 @@
-﻿
-namespace Homework11.Data.Enums
+﻿namespace Homework11.Data.Enums
 {
     //enum with supported browsers
     public enum Browsers

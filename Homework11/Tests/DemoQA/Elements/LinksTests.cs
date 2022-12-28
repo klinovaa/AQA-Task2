@@ -23,7 +23,7 @@ namespace Homework11.Tests.DemoQA.Elements
 
             //methods from Page Objects
             //check Following links will open new tab
-            for (var i = 0; i < Links.linksThatOpenNewTab; i++)
+            for (var i = 0; i < Links.LinksThatOpenNewTab; i++)
             {
                 var link = linksPage.GetLinkAt(i);
 
@@ -58,7 +58,7 @@ namespace Homework11.Tests.DemoQA.Elements
             //check Following links will send an api call
             var size = linksPage.GetAmountOfLinks();
 
-            for (var i = Links.indexOfFirstLinkToCallApi; i < size; i++)
+            for (var i = Links.IndexOfFirstLinkToCallApi; i < size; i++)
             {
                 var link = linksPage.GetLinkAt(i);
                 WebDriverFactory.JavaScriptExecutor.ExecuteScript("arguments[0].scrollIntoView()", link);//пока не понимаю, как переиспользовать ScrollIntoView()
@@ -100,7 +100,7 @@ namespace Homework11.Tests.DemoQA.Elements
                 }
 
                 var resultText = linksPage.GetResultText();
-                Assert.AreEqual(resultText, Links.partOneOfPrintedText + status + Links.partTwoOfPrintedText + name);
+                Assert.AreEqual(resultText, Links.PartOneOfPrintedText + status + Links.PartTwoOfPrintedText + name);
             }
         }
     }

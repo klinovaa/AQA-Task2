@@ -29,16 +29,16 @@ namespace Homework11.Tests.DemoQA.Elements
             //initialize Popup
             var registrationForm = new RegistrationForm();
 
-            registrationForm.EnterFirstName(WebTables.firstName);
-            registrationForm.EnterLastName(WebTables.lastName);
-            registrationForm.EnterEmail(WebTables.email);
-            registrationForm.EnterAge(WebTables.age);
-            registrationForm.EnterSalary(WebTables.salary);
-            registrationForm.EnterDepartment(WebTables.department);
+            registrationForm.EnterFirstName(WebTables.FirstName);
+            registrationForm.EnterLastName(WebTables.LastName);
+            registrationForm.EnterEmail(WebTables.Email);
+            registrationForm.EnterAge(WebTables.Age);
+            registrationForm.EnterSalary(WebTables.Salary);
+            registrationForm.EnterDepartment(WebTables.Department);
 
             registrationForm.ClickSubmitButton();
 
-            var comparableValues = new List<String>() { WebTables.firstName, WebTables.lastName, WebTables.age, WebTables.email, WebTables.salary, WebTables.department };
+            var comparableValues = new List<String>() { WebTables.FirstName, WebTables.LastName, WebTables.Age, WebTables.Email, WebTables.Salary, WebTables.Department };
             var actualValues = new List<Object>();
             var size = webTablesPage.GetAmountOfCells() - 1;
             for (var i = 0; i < size; i++)

@@ -24,17 +24,17 @@ namespace Homework11.Tests.DemoQA.Elements
             //methods from Page Objects
             //find all checkboxes and count them
             var size = checkBoxPage.GetAmountOfCheckBoxes();
-            Assert.AreEqual(CheckBoxes.amountValueCollapsed, size);
+            Assert.AreEqual(CheckBoxes.AmountValueCollapsed, size);
 
             //expand all and count chechboxes
             checkBoxPage.ExpandAllCheckboxes();
             size = checkBoxPage.GetAmountOfCheckBoxes();
-            Assert.AreEqual(CheckBoxes.amountValueExpanded, size);
+            Assert.AreEqual(CheckBoxes.AmountValueExpanded, size);
 
             //collapse all and count checkboxes again
             checkBoxPage.CollapseAllCheckboxes();
             size = checkBoxPage.GetAmountOfCheckBoxes();
-            Assert.AreEqual(CheckBoxes.amountValueCollapsed, size);
+            Assert.AreEqual(CheckBoxes.AmountValueCollapsed, size);
         }
 
         [Test]
@@ -44,7 +44,7 @@ namespace Homework11.Tests.DemoQA.Elements
             var checkBoxPage = new CheckBoxPage();
 
             //methods from Page Objects
-            var actualResultText = "";
+            var actualResultText = string.Empty;
 
             checkBoxPage.ExpandAllCheckboxes();
             checkBoxPage.ChooseAllCheckboxes();
@@ -74,7 +74,7 @@ namespace Homework11.Tests.DemoQA.Elements
             
             var resultText = checkBoxPage.GetResultText();
 
-            Assert.AreEqual(resultText, CheckBoxes.printedTextWhenSelected + actualResultText);
+            Assert.AreEqual(resultText, CheckBoxes.PrintedTextWhenSelected + actualResultText);
         }
     }
 }

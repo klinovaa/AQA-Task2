@@ -1,10 +1,9 @@
-﻿
-namespace Homework11.Data.Constants
+﻿namespace Homework11.Data.Constants
 {
     public class Buttons
     {
-        public const string doubleClickPrintedText = "You have done a double click";
-        public const string rightClickPrintedText = "You have done a right click";
-        public const string dynamicClickPrintedText = "You have done a dynamic click";
+        public const string DoubleClickPrintedText = "You have done a double click";
+        public const string RightClickPrintedText = "You have done a right click";
+        public const string DynamicClickPrintedText = "You have done a dynamic click";
     }
 }

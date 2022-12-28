@@ -24,19 +24,19 @@ namespace Homework11.Tests.DemoQA.Elements
             //methods from Page Objects
             //find radiobuttons and count them
             var size = radioButtonPage.GetAmountOfRadioButtons();
-            Assert.AreEqual(RadioButtons.amountValue, size);
+            Assert.AreEqual(RadioButtons.AmountValue, size);
 
             //check text for yes button
             var yesRadioText = radioButtonPage.GetYesRadioText();
-            Assert.AreEqual(RadioButtons.yesValue, yesRadioText);
+            Assert.AreEqual(RadioButtons.YesValue, yesRadioText);
 
             //check text for impressive button
             var impressiveRadioText = radioButtonPage.GetImpressiveRadioText();
-            Assert.AreEqual(RadioButtons.impressiveValue, impressiveRadioText);
+            Assert.AreEqual(RadioButtons.ImpressiveValue, impressiveRadioText);
 
             //check text for no button
             var noRadioText = radioButtonPage.GetNoRadioText();
-            Assert.AreEqual(RadioButtons.noValue, noRadioText);
+            Assert.AreEqual(RadioButtons.NoValue, noRadioText);
         }
 
         [Test]
@@ -59,7 +59,7 @@ namespace Homework11.Tests.DemoQA.Elements
                     Assert.IsTrue(radio.Selected);
                     var resultText = radioButtonPage.GetResultText();
                     var labelText = radioButtonPage.GetLabelText(i);
-                    Assert.AreEqual(RadioButtons.printedText + labelText, resultText);
+                    Assert.AreEqual(RadioButtons.PrintedText + labelText, resultText);
                 }
                 else
                 {

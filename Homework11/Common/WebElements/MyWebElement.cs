@@ -57,7 +57,7 @@ namespace Homework11.Common.WebElements
 
         public IWebElement FindElement(By by) => WebElement.FindElement(By);
 
-        public ReadOnlyCollection<IWebElement> FindElements(By by) => WebElement.FindElements(By);
+        public virtual ReadOnlyCollection<IWebElement> FindElements(By by) => WebElement.FindElements(By);
 
         public string GetAttribute(string attributeName) => WebElement.GetAttribute(attributeName);
 
@@ -84,7 +84,7 @@ namespace Homework11.Common.WebElements
         public int GetAmountOfElements() => FindElements(By).Count();
 
         //method to get element with apropriate index
-        public IWebElement GetElementAt(int i) => FindElements(By).ElementAt(i);
+        public virtual IWebElement GetElementAt(int i) => FindElements(By).ElementAt(i);
 
         //method to simulate double click via Actions
         public void DoubleClickViaActions() => WebDriverFactory.Actions.DoubleClick(WebElement).Perform();
