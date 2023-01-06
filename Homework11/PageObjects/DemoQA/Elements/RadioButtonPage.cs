@@ -5,12 +5,12 @@ namespace Homework11.PageObjects.DemoQA.Elements
 {
     public class RadioButtonPage : BaseDemoQAPage
     {
-        private MyWebElement _allRadioButtons = new MyWebElement(By.XPath("//*[@type='radio']"));
-        private MyWebElement _yesRadio = new MyWebElement(By.XPath("//*[@for='yesRadio']"));
-        private MyWebElement _impressiveRadio = new MyWebElement(By.XPath("//*[@for='impressiveRadio']"));
-        private MyWebElement _noRadio = new MyWebElement(By.XPath("//*[@for='noRadio']"));
-        private MyWebElement _allRadioLabels = new MyWebElement(By.XPath("//label"));
-        private MyWebElement _resultText = new MyWebElement(By.XPath("//*[@class='mt-3']"));
+        private MyRadioButton _allRadioButtons = new MyRadioButton(By.XPath("//*[@type='radio']"));
+        private MyRadioButton _yesRadio = new MyRadioButton(By.XPath("//*[@for='yesRadio']"));
+        private MyRadioButton _impressiveRadio = new MyRadioButton(By.XPath("//*[@for='impressiveRadio']"));
+        private MyRadioButton _noRadio = new MyRadioButton(By.XPath("//*[@for='noRadio']"));
+        private MyRadioButton _allRadioLabels = new MyRadioButton(By.XPath("//label"));
+        private MyRadioButton _resultText = new MyRadioButton(By.XPath("//*[@class='mt-3']"));
 
         public string GetYesRadioText() => _yesRadio.Text;
 
