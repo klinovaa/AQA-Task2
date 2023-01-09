@@ -6,11 +6,11 @@ namespace Homework11.PageObjects.DemoQA.Elements
     public class CheckBoxPage : BaseDemoQAPage
     {
         private MyCheckBox _allCheckBoxes = new MyCheckBox(By.XPath("//*[@type='checkbox']"));
-        private MyCheckBox _expandAll = new MyCheckBox(By.XPath("//*[@title='Expand all']"));
-        private MyCheckBox _collapseAll = new MyCheckBox(By.XPath("//*[@title='Collapse all']"));
-        private MyCheckBox _chooseAll = new MyCheckBox(By.XPath("//*[@class='rct-checkbox']"));
-        private MyCheckBox _allCheckLabels = new MyCheckBox(By.XPath("//*[@class='rct-title']"));
-        private MyCheckBox _resultText = new MyCheckBox(By.Id("result"));
+        private MyWebElement _expandAll = new MyWebElement(By.XPath("//*[@title='Expand all']"));
+        private MyWebElement _collapseAll = new MyWebElement(By.XPath("//*[@title='Collapse all']"));
+        private MyWebElement _chooseAll = new MyWebElement(By.XPath("//*[@class='rct-checkbox']"));
+        private MyWebElement _allCheckLabels = new MyWebElement(By.XPath("//*[@class='rct-title']"));
+        private MyWebElement _resultText = new MyWebElement(By.Id("result"));
 
         public int GetAmountOfCheckBoxes() => _allCheckBoxes.GetAmountOfElements();
 

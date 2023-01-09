@@ -9,8 +9,8 @@ namespace Homework11.PageObjects.DemoQA.Elements
         private MyRadioButton _yesRadio = new MyRadioButton(By.XPath("//*[@for='yesRadio']"));
         private MyRadioButton _impressiveRadio = new MyRadioButton(By.XPath("//*[@for='impressiveRadio']"));
         private MyRadioButton _noRadio = new MyRadioButton(By.XPath("//*[@for='noRadio']"));
-        private MyRadioButton _allRadioLabels = new MyRadioButton(By.XPath("//label"));
-        private MyRadioButton _resultText = new MyRadioButton(By.XPath("//*[@class='mt-3']"));
+        private MyWebElement _allRadioLabels = new MyWebElement(By.XPath("//label"));
+        private MyWebElement _resultText = new MyWebElement(By.XPath("//*[@class='mt-3']"));
 
         public string GetYesRadioText() => _yesRadio.Text;
 

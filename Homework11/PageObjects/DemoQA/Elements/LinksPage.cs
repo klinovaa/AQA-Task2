@@ -5,10 +5,10 @@ namespace Homework11.PageObjects.DemoQA.Elements
 {
     public class LinksPage : BaseDemoQAPage
     {
-        private MyLink _allLinks = new MyLink(By.XPath("//*[@id='linkWrapper']/p/a"));
-        private MyLink _dynamicLink = new MyLink(By.Id("dynamicLink"));
-        private MyLink _imgOnMainPage = new MyLink(By.XPath("//*[@alt='Selenium Online Training']"));
-        private MyLink _resultText = new MyLink(By.Id("linkResponse"));
+        private MyWebElement _allLinks = new MyWebElement(By.XPath("//*[@id='linkWrapper']/p/a"));
+        private MyWebElement _dynamicLink = new MyWebElement(By.Id("dynamicLink"));
+        private MyWebElement _imgOnMainPage = new MyWebElement(By.XPath("//*[@alt='Selenium Online Training']"));
+        private MyWebElement _resultText = new MyWebElement(By.Id("linkResponse"));
 
         public IWebElement GetLinkAt(int index) => _allLinks.GetElementAt(index);
 
