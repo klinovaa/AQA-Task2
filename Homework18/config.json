@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "LocalAdonetDB": "Server=localhost;Initial Catalog=adonetdb;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}
